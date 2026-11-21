@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cajero Virtual</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Cajero Virtual</h1>
+
+        <!-- MENSAJES -->
+        <div id="mensaje"></div>
+
+        <!-- BOTONES -->
+        <div class="menuBotones">
+
+            <button onclick="mostrarLogin()">
+                Iniciar Sesión
+            </button>
+
+            <button onclick="mostrarRegistro()">
+                Registrarse
+            </button>
+
+        </div>
+
+        <!-- LOGIN -->
+        <div id="loginBox" class="card">
+
+            <h2>Iniciar Sesión</h2>
+
+            <input
+                type="text"
+                id="loginUsuario"
+                placeholder="Usuario"
+            >
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Contraseña"
+            >
+
+            <button onclick="login()">
+                Ingresar
+            </button>
+
+        </div>
+
+        <!-- REGISTRO -->
+        <div id="registroBox" class="card oculto">
+
+            <h2>Registro</h2>
+
+            <input
+                type="text"
+                id="registroUsuario"
+                placeholder="Nuevo usuario"
+            >
+
+            <input
+                type="password"
+                id="registroPassword"
+                placeholder="Nueva contraseña"
+            >
+
+            <button onclick="registrar()">
+                Crear Cuenta
+            </button>
+
+        </div>
+
+        <!-- PANEL -->
+        <div id="panel" class="card oculto">
+
+            <h2 id="bienvenida"></h2>
+
+            <!-- SALDO FIJO -->
+            <div id="saldoFijo"></div>
+
+            <div class="acciones">
+
+                <button onclick="verSaldo()">
+                    Ver Saldo
+                </button>
+
+                <button onclick="consignar()">
+                    Consignar
+                </button>
+
+                <button onclick="retirar()">
+                    Retirar
+                </button>
+
+                <button onclick="transferir()">
+                    Transferir
+                </button>
+
+                <button onclick="verMovimientos()">
+                    Movimientos
+                </button>
+
+                <button onclick="cerrarSesion()">
+                    Cerrar Sesión
+                </button>
+
+            </div>
+
+            <div id="resultado"></div>
+
+            <div id="formularioOperacion"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
